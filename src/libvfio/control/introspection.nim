@@ -39,9 +39,9 @@ proc lookingGlassIntrospect(spicePort: int, introspections: seq[string], uuid: s
     lookingGlassArgs = Args(
       exec: "/usr/local/bin/looking-glass-client",
       args: @[
-        "-f", introspections[0], "-a", "yes", "egl:scale", "1", "-m", "58", "-p", $spicePort,
+        "-f", introspections[0], "-a", "yes", "egl:scale", "1", "-p", $spicePort,
         "input:rawMouse", "yes", "input:captureOnly", "yes", "spice:captureOnStart", "yes",
-        "win:title=" & "Looking Glass + LibVF.IO (CapsLock toggles input | Hold CapsLock for menu) UUID: " & uuid
+        "win:title=" & "Looking Glass + LibVF.IO (ScrollLock toggles input | Hold for menu) UUID: " & uuid
       ]
     )
 
